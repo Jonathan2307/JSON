@@ -1,3 +1,8 @@
-.imgCard{
-    width: 100%;
+.scroller {
+    overflow-y: scroll;
+    max-height: 100px;
+}
+
+.rateOnTen{
+    font-style : italic;
 }
