@@ -7,13 +7,9 @@ function createH1() {
 };
 window.addEventListener('DOMContentLoaded', createH1())
 
-
-
 fetch('http://localhost:8888/JSON/movies.json')
     .then(resp => resp.json())
     .then(function (jsonContent) {
-       
-
         jsonContent.results.forEach(element => {
             let votedRate = Math.floor(element.vote_average / 2);
             let star
@@ -36,8 +32,6 @@ fetch('http://localhost:8888/JSON/movies.json')
                 default:
                     break;
             };
-            
-
             movie.innerHTML += `
                 <div class="card mb-3 bg-dark" style="max-width: 540px ;">
                 <div class="row  g-0">
@@ -54,13 +48,6 @@ fetch('http://localhost:8888/JSON/movies.json')
                     </div>
                 </div>
                 </div>`
-
         })
-
-
-
     })
     .catch(err => console.error(`erreur importation`))
-
-// \u2606 empty
-// \u2605 full
