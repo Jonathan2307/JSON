@@ -7,7 +7,7 @@ function createH1() {
 };
 window.addEventListener('DOMContentLoaded', createH1())
 
-fetch('http://localhost:8888/JSON/movies.json')
+fetch('http://localhost:8888/JSON/videoclub/movies.json')
     .then(resp => resp.json())
     .then(function (jsonContent) {
         jsonContent.results.forEach(element => {
